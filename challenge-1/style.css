@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Public Sans", sans-serif;
+}
+
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Header section */
+section header#header {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.55rem;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+section header#header img {
+  max-width: 100%;
+  height: auto;
+}
+
+section header#header ul {
+  display: flex;
+  align-items: center;
+}
+
+section header#header ul li {
+  list-style: none;
+  padding: 0 .78rem;
+}
+
+li::after{
+  content: ' ';
+  position: absolute;
+  width:3rem;
+  height: .15rem;
+  bottom: -.77rem;
+  right: .51rem;
+background: linear-gradient(to right,var(--lime-green),var(--bright-cyan));
+}
+
+section header#header ul li:hover{
+position: relative;
+}
+
+section header#header ul li a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+section header#header ul li:hover a {
+  color: black;
+}
+
+button.invite-btn {
+  padding: 0.42rem 1rem;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  border-radius: 2.5rem;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+button.invite-btn:hover {
+  background: linear-gradient(to left, var(--lime-green), var(--bright-cyan));
+}
+
+/* landing area */
+section#lan-sec {
+  background-color: var(--very-light-gray);
+}
+
+section div#landing-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+section div#landing-sec div.box-1 {
+  flex: 1 0 40%;
+  padding: 3rem 0rem 3rem 7rem;
+}
+
+section div#landing-sec div.box-1 h1 {
+  padding-bottom: 1rem;
+  font-size: 2.4rem;
+  font-weight: lighter;
+}
+
+section div#landing-sec div.box-1 p {
+  padding-bottom: 1rem;
+}
+
+p {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+}
+
+section div#landing-sec div.box-2 {
+  flex: 1 0 60%;
+}
+
+section div#landing-sec div.box-2 :first-child {
+  width: 100%;
+  height: 28rem;
+  transform: scale(1.6);
+  overflow: hidden;
+  position: relative;
+  top: -2.5rem;
+  left: 13rem;
+}
+
+section div#landing-sec div.box-2 :last-child {
+  position: absolute;
+  height: 43rem;
+  left: 42rem;
+  top: -4rem;
+}
+
+/* section-3 */
+section div#sec-3 {
+  padding:4rem 7rem 2rem 7rem;
+  background-color: var(--light-grayish-blue);
+}
+
+section div#sec-3 h1 {
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+
+section div#sec-3 div#wrapper {
+  display: flex;
+  margin: 2rem 0;
+}
+
+section div#sec-3 div#wrapper div > img {
+  padding: 0.8rem 0;
+}
+
+section div#sec-3 div#wrapper div > h2,
+p {
+  padding: 0.88rem 0;
+}
+
+section div#sec-3 div#wrapper div > h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+section div#sec-3 div#wrapper > * + * {
+  padding-left: 2rem;
+}
+
+/*section-4 */
+section#sec-4{
+  background-color: var(--very-light-gray);
+  padding: 3rem 7rem;
+}
+
+section#sec-4>h1{
+  padding: 1rem 0 2rem 0;
+  font-weight: normal;
+}
+
+section#sec-4 div#sec-4-block > *+*{
+  margin-left: .88rem;
+}
+section#sec-4 div#sec-4-block{
+  display: flex;
+}
+
+section#sec-4 div.block img{
+  width: 13rem;
+  height: 8rem;
+}
+
+section#sec-4 div.block >h4{
+  font-size: medium;
+ font-weight:lighter;
+}
+
+/* footer */
+footer{
+  background-color: var(--dark-blue);
+  padding: 2rem 7rem;
+}
+
+footer div#footer-sec{
+display: flex;
+justify-content: space-between;
+}
+
+footer div#footer-sec div>div#social-icons{
+  padding-top: 2rem;
+}
+
+footer div#footer-sec div >ul>li{
+  padding-bottom: 0.55rem;
+  color: var(--grayish-blue);
+  list-style: none;
+  font-size: .88rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
