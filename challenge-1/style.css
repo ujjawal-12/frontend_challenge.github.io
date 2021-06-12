@@ -40,6 +40,10 @@ section header#header img {
   height: auto;
 }
 
+section header#header button#hamburger {
+  display: none;
+}
+
 section header#header ul {
   display: flex;
   align-items: center;
@@ -47,21 +51,21 @@ section header#header ul {
 
 section header#header ul li {
   list-style: none;
-  padding: 0 .78rem;
+  padding: 0 0.78rem;
 }
 
-li::after{
-  content: ' ';
+li::after {
+  content: " ";
   position: absolute;
-  width:3rem;
-  height: .15rem;
-  bottom: -.77rem;
-  right: .51rem;
-background: linear-gradient(to right,var(--lime-green),var(--bright-cyan));
+  width: 3rem;
+  height: 0.15rem;
+  bottom: -0.77rem;
+  right: 0.51rem;
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
 }
 
-section header#header ul li:hover{
-position: relative;
+section header#header ul li:hover {
+  position: relative;
 }
 
 section header#header ul li a {
@@ -140,7 +144,7 @@ section div#landing-sec div.box-2 :last-child {
 
 /* section-3 */
 section div#sec-3 {
-  padding:4rem 7rem 2rem 7rem;
+  padding: 4rem 7rem 2rem 7rem;
   background-color: var(--light-grayish-blue);
 }
 
@@ -174,57 +178,116 @@ section div#sec-3 div#wrapper > * + * {
 }
 
 /*section-4 */
-section#sec-4{
+section#sec-4 {
   background-color: var(--very-light-gray);
   padding: 3rem 7rem;
 }
 
-section#sec-4>h1{
+section#sec-4 > h1 {
   padding: 1rem 0 2rem 0;
   font-weight: normal;
 }
 
-section#sec-4 div#sec-4-block > *+*{
-  margin-left: .88rem;
+section#sec-4 div#sec-4-block > * + * {
+  margin-left: 0.88rem;
 }
-section#sec-4 div#sec-4-block{
+section#sec-4 div#sec-4-block {
   display: flex;
 }
 
-section#sec-4 div.block img{
+section#sec-4 div.block img {
   width: 13rem;
   height: 8rem;
 }
 
-section#sec-4 div.block >h4{
+section#sec-4 div.block > h4 {
   font-size: medium;
- font-weight:lighter;
+  font-weight: lighter;
 }
 
 /* footer */
-footer{
+footer {
   background-color: var(--dark-blue);
   padding: 2rem 7rem;
 }
 
-footer div#footer-sec{
-display: flex;
-justify-content: space-between;
+footer div#footer-sec {
+  display: flex;
+  justify-content: space-between;
 }
 
-footer div#footer-sec div>div#social-icons{
+footer div#footer-sec div > div#social-icons {
   padding-top: 2rem;
 }
 
-footer div#footer-sec div >ul>li{
+footer div#footer-sec div > ul > li {
   padding-bottom: 0.55rem;
   color: var(--grayish-blue);
   list-style: none;
-  font-size: .88rem;
+  font-size: 0.88rem;
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 10px;
+  }
+
+ 
+  section#sec-1 header#header {
+    /* padding: 0 0 2rem 0; */
+    /* padding: .55rem; */
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    display: block;
+  }
+
+  section#sec-1 header#header ul {
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+    right: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 0;
+    border-radius: 0.88rem;
+    box-shadow: 2px 17px 35px -3px rgba(0, 0, 0, 0.7);
+    width: 70%;
+    background-color: rgb(244, 250, 248);
+    transition: all .2s linear;
+  }
+
+  section#sec-1 header#header ul.nav-item{
+    right: -50%;
+    transition: all .2s linear;
+    
+  }
+
+  section#sec-1 header#header ul li {
+    padding: 0.77rem;
+    font-size: 1.5rem;
+  }
+
+  li::after {
+    position: static;
+  }
+  section#sec-1 header#header ul li a {
+    color: black;
+  }
+
+  button.invite-btn.invite-btn-mb {
+    display: none;
+  }
+
+  section header#header button#hamburger{
+    display:block;
+    outline: none;
+    padding: .80rem;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .60rem 1.5rem;
+    /* background-color:rgb(214, 205, 205); */
+    border-radius: .22rem;
   }
 }
