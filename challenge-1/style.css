@@ -227,7 +227,7 @@ footer div#footer-sec div > ul > li {
   font-size: 0.88rem;
 }
 
-@media (max-width: 756px) {
+@media (max-width: 780px) {
   html {
     font-size: 14px;
     overflow-x: hidden;
@@ -365,7 +365,7 @@ footer div#footer-sec div > ul > li {
     display: flex;
     flex-direction: column;
   }
-  
+
   footer div#footer-sec > div {
     margin-bottom: 3rem;
     text-align: center;
